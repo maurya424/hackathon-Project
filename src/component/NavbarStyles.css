@@ -1,0 +1,120 @@
+.NavbarItems{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 black ;
+    width: auto;
+    height: 80px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+*{
+    padding: 2px;
+    
+}
+.navbar-logo{
+    color:black;
+    font-size: 2rem;
+    cursor:pointer;
+}
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+    grid: gap 10px;
+    list-style: none;
+}
+.nav-links{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight:600;
+    padding: 5px;;
+    white-space:nowrap;
+    align-items: center;
+
+}
+.nav-links i{
+    padding-right:10px;
+}
+
+.nav-links:hover{
+    background-color: rgb(175, 175, 175);
+    color:white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+#button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(100, 100, 233);
+    color:white;
+    margin-right: 8px;
+}
+
+.menu-icons{
+    display: none;
+}
+@media screen and (max-width:1000px)  {
+    .NavbarItems{
+        z-index: 99;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(60, 144, 89);
+        width:25%;
+        position:absolute;
+        top:1%;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 80px 0 30px 0 ;
+        margin-top: 0;
+        border-radius: 5px;
+
+    }
+    .nav-menu.active{
+        left:0;
+        opacity: 1;
+        z-index: -1;
+    }
+    .nav-links{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+        margin: auto;
+        width: 80%;
+
+    }
+    .nav-links:hover{
+        background: gray;
+        transition: none;
+        
+    }
+    button{
+        display: block;
+        text-align: center;
+        padding:80px 0 30px 0;
+        margin: auto;
+        width: 80%;
+        border-radius: 5px;
+        background-color: rgb(100, 100, 233);
+        color:white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .menu-icons{
+        display:block;
+        cursor:pointer ;
+    }
+    .menu-icons i {
+        font-size:1.2rem ;
+        color: #222;
+    }
+  
+}

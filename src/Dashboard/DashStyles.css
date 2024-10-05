@@ -1,0 +1,127 @@
+.sidebarItems{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 black ;
+    width: auto;
+    height: 80px;
+    border-radius: 5px;
+    z-index: 9999;
+    margin-bottom: 13px;
+}
+*{
+    padding: 2px; 
+}
+h1{
+    color:black;
+    font-size: 2rem;
+    cursor:pointer;
+    margin:0 auto;
+    text-align: 50%;
+}
+h1 i{
+    padding-right:10px;
+}
+.menu-icons{
+    display:block;
+    cursor:pointer ;
+}
+.menu-icons i {
+    font-size:1.2rem ;
+    color: #222;
+}
+.Left{
+    width:35%;
+    border-radius: 5px;
+}
+.sidebar-menu{
+    display: grid;
+    grid-template-rows: repeat(12,auto);
+    grid: gap 25px;
+    list-style: none;
+}
+.sidebar-menu{
+    display:flex;
+    display: grid;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width:13%;
+    height:75%;
+    position:absolute;
+    align-items: stretch;
+    margin: 0;
+    transition: 0.3s  ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 black ;
+    
+}
+.sidebar-links{
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    margin: auto;
+    width: auto;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight:600;
+    padding: 5px;;
+    white-space:nowrap;
+    align-items: center;
+}
+.sidebar-links:hover{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 253, 253);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+.sidebar-links i{
+    padding-right:10px;
+}
+.Right{
+    width:80%;
+}
+/*Form me andar kya set rahe ga wo wala hey ye */
+.Form {
+    display:flex;
+    display: grid;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width:83%;  /*Auto form size wala hai ye */
+    height:75%;
+    position:absolute;
+    align-items: stretch;
+    margin-left:15%;
+    transition: 0.3s  ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 black ;
+}
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    cursor: pointer;
+}
+.sidebar-left h1 {
+    margin: 0;
+}
+.side-menu {
+    display: none; /* Menu is hidden initially */
+    list-style: none;
+    padding-left: 0;
+  }
+
