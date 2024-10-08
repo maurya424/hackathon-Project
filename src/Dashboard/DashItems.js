@@ -25,7 +25,7 @@ export const DashItems =[
     },
     {
         title :"Profile",
-        url :"/NextPage",
+        url :"/Profile",
         cName:"sidebar-links",
         icon:"fa-regular fa-id-badge"
     },

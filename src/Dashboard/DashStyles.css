@@ -36,7 +36,6 @@ h1 i{
     border-radius: 5px;
 }
 .sidebar-menu{
-    display: grid;
     grid-template-rows: repeat(12,auto);
     grid: gap 25px;
     list-style: none;
@@ -56,8 +55,20 @@ h1 i{
     transition: 0.3s  ease-in-out;
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 black ;
-    
 }
+.sidebar-menu.active {
+    display: grid;
+    grid-template-rows: repeat(12, auto);
+    justify-content: flex-start;
+    background-color: white;
+    width: 13%;
+    height: 75%;
+    position: absolute;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 black;
+  }
 .sidebar-links{
     display: block;
     width: 100%;
@@ -73,15 +84,36 @@ h1 i{
     white-space:nowrap;
     align-items: center;
 }
+.sidebar-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+  }
 .sidebar-links:hover{
     background-color: rgb(0, 0, 0);
     color:rgb(255, 253, 253);
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
 }
-.sidebar-links i{
-    padding-right:10px;
-}
+.side-menu {
+    display: grid;
+    grid-template-rows: repeat(12, auto);
+    justify-content: flex-start;
+    background-color: white;
+    width: 5%;  /* Narrower when collapsed */
+    height: 75%;
+    position: absolute;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 black;
+  }
 .Right{
     width:80%;
 }
@@ -110,7 +142,7 @@ h1 i{
     background-color: #333;
     color: white;
 }
-.profile-pic {
+.profile-pic {/* Profile picture */
     width: 40px;
     height: 40px;
     border-radius: 50%; 
@@ -124,4 +156,71 @@ h1 i{
     list-style: none;
     padding-left: 0;
   }
+  /* Icons inside sidebar links */
+.sidebar-links i {
+    padding-right: 10px;
+    font-size: 1.2rem;
+  }
 
+
+  @media screen and (max-width:1000px)  {
+    .sidebarItems{
+        z-index: 99;
+    }
+    .sidebar-menu{
+        display: flex;
+        display: grid;
+        flex-direction: column;
+        background-color: rgb(60, 144, 89);
+        width:25%;
+        height: auto;
+        position:absolute;
+        top:1%;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 80px 0 30px 0 ;
+        margin-top: 0;
+        border-radius: 5px;
+    }
+    .sidebar-menu.active{
+        left:0;
+        opacity: 1;
+        z-index: -1;
+    }
+    .sidebar-links{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+        margin: auto;
+        width: 80%;
+    }
+    .sidebar-links:hover{
+        background: gray;
+        transition: none;
+    }
+    button{
+        display: block;
+        text-align: center;
+        padding:80px 0 30px 0;
+        margin: auto;
+        width: 80%;
+        border-radius: 5px;
+        background-color: rgb(100, 100, 233);
+        color:white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    .menu-icons{
+        display:block;
+        cursor:pointer ;
+    }
+    .menu-icons i {
+        font-size:1.2rem ;
+        color: #222;
+    }
+    
+  }

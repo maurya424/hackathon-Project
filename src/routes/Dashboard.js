@@ -1,8 +1,8 @@
-
+import Dash from '../Dashboard/Dash';
 function Dashboard(){
     return (
         <>
-        <center>This is a dashboard</center>
+        <Dash/>
         </>   
     );
 }

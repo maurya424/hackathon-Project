@@ -1,8 +1,7 @@
-
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import { DashItems } from "./DashItems";
-import "./DashStyles.css";
+import "./DashStyle.css";
 class Dash extends Component {
   state = { clicked: false };
   handleClick = () => {
@@ -31,7 +30,8 @@ class Dash extends Component {
                 return (
                   <li key={index}>
                     <Link className={items.cName} to={items.url}>
-                      <i className={items.icon}></i>{items.title}
+                      <i className={items.icon}></i>
+                      {this.state.clicked && items.title} {/* Only show title when clicked */}
                     </Link>
                   </li>
                 );
