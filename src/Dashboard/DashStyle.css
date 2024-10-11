@@ -1,26 +1,29 @@
-.sidebarItems{
-  display:flex;
+.sidebarItems {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  box-shadow: 0 5px 15px 0 black ;
+  box-shadow: 0 5px 15px 0 black;
   width: auto;
   height: 80px;
   border-radius: 5px;
   margin-bottom: 13px;
 }
-*{
+
+* {
   padding: 2px; 
 }
-h1{
-  color:black;
+
+h1 {
+  color: black;
   font-size: 2rem;
-  cursor:pointer;
-  margin:0 auto;
-  text-align: 50%;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center; /* Changed from 50% to center for proper alignment */
 }
-h1 i{
-  padding-right:10px;
+
+h1 i {
+  padding-right: 10px;
 }
 
 /* Sidebar when expanded */
@@ -29,7 +32,6 @@ h1 i{
   grid-template-rows: repeat(12, auto);
   justify-content: flex-start;
   background-color: white;
-  
   width: 13%;
   height: 75%;
   position: absolute;
@@ -37,6 +39,7 @@ h1 i{
   transition: 0.3s ease-in-out;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 black;
+  z-index: 10; /* Ensure it appears above other elements */
 }
 
 /* Sidebar when collapsed */
@@ -45,13 +48,14 @@ h1 i{
   grid-template-rows: repeat(12, auto);
   justify-content: flex-start;
   background-color: white;
-  width: 5%;  /* Narrower when collapsed */
+  width: 5%; /* Narrower when collapsed */
   height: 75%;
   position: absolute;
   margin: 0;
   transition: 0.3s ease-in-out;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 black;
+  z-index: 10; /* Ensure it appears above other elements */
 }
 
 /* Sidebar links style */
@@ -81,55 +85,66 @@ h1 i{
 }
 
 /* Remove bullet points for sidebar menu items */
-.sidebar-menu li, .side-menu li {
-  list-style-type: none;  /* Removes the bullet point */
-  padding-left: 0;  /* Ensure no left padding */
-  margin: 0;  /* Remove any margins */
+.sidebar-menu li,
+.side-menu li {
+  list-style-type: none; /* Removes the bullet point */
+  padding-left: 0; /* Ensure no left padding */
+  margin: 0; /* Remove any margins */
 }
 
 /* Optional: Reset padding and margin for unordered list */
-.sidebar-menu, .side-menu {
+.sidebar-menu,
+.side-menu {
   padding-left: 0;
   margin: 0;
 }
 
 /* Title hidden when menu is collapsed */
 .side-menu li .sidebar-links span {
-  display: none;  /* Hide titles when collapsed */
+  display: none; /* Hide titles when collapsed */
 }
 
 /* When sidebar is expanded, show titles */
 .sidebar-menu.active li .sidebar-links span {
-  display: inline;  /* Show titles when expanded */
+  display: inline; /* Show titles when expanded */
   margin-left: 10px; /* Add some space between icon and title */
 }
 
-
-
-
-.Right{
-  width:80%;
+.Right {
+  width: 80%;
 }
-/*Form me andar kya set rahe ga wo wala hey ye */
+
+/* Form styles */
 .Form {
-  display:flex;
-  display: grid;
-  justify-content: flex-start;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width:83%;  /*Auto form size wala hai ye */
-  height:75%;
-  position:absolute;
+  width: 83%; /* Auto form size */
+  height: 75%;
+  position: absolute;
   align-items: stretch;
-  margin-left:15%;
-  transition: 0.3s  ease-in-out;
+  margin-left: 15%;
+  transition: 0.3s ease-in-out;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 black ;
+  box-shadow: 0 5px 15px 0 black;
 }
-.profile-pic {/* Profile picture */
+
+/* Profile picture */
+.profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%; 
   cursor: pointer;
+}
+
+/* Menu icons */
+.menu-icon {
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjust icon size */
+  display: block; /* Ensure it's a flex container */
+  align-items: center; /* Center align items */
+  justify-content: center; /* Center align items */
+  padding: 10px; /* Add padding for better spacing */
+  z-index: 20; /* Ensure this is on top */
 }

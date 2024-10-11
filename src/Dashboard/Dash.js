@@ -11,7 +11,7 @@ class Dash extends Component {
     return (
       <>
         <nav className="sidebarItems">
-          <div className="menu-icons" onClick={this.handleClick}>
+          <div className="menu-icon" onClick={this.handleClick}>
             <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
           <h1><i className="fa-solid fa-user"></i>Dashboard</h1>
